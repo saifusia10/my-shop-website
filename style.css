@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+}
+
+/* NAVBAR */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+
+/* HERO */
+
+header {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.small-title {
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #bfdbfe;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 19px;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 14px 30px;
+
+    background: white;
+    color: #2563eb;
+
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    max-width: 1100px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    color: #222;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-icon {
+    font-size: 55px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+}
+
+.product-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+button {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#message {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* CONTACT */
+
+.contact {
+    background: white;
+    color: #222;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 35px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact button {
+    padding: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+
+    background: #020617;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
+        min-height: 500px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+}/* FINAL MOBILE DESIGN */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
+        padding: 45px 15px 25px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        width: 92%;
+        padding: 25px 18px;
+    }
+
+    .products {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    section {
+        padding: 35px 15px;
+    }

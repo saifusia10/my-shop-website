@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Shop | General & Makeup</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            background: rgba(0, 0, 0, 0.65);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        header {
+            padding: 65px 20px 35px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            padding: 45px 20px;
+        }
+
+        .products {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            color: #222;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .product-icon {
+            font-size: 45px;
+        }
+
+        .product-card h3 {
+            font-size: 23px;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .info-box {
+            max-width: 700px;
+            margin: 20px auto;
+            background: rgba(255,255,255,0.12);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        form {
+            max-width: 650px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 130px;
+        }
+
+        footer {
+            padding: 25px;
+            background: rgba(0,0,0,0.5);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            My Shop 🛍️
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <header id="home">
+
+        <h1>Welcome to My Shop</h1>
+
+        <p>
+            General & Makeup Items
+        </p>
+
+    </header>
+
+
+    <section id="products">
+
+    <h2>Our Products</h2>
+
+    <p class="section-text">
+        Hamare popular products dekhiye
+    </p>
+
+    <div class="products">
+
+        <div class="product-card">
+            <div class="product-icon">🧴</div>
+            <h3>Ponds Face Wash</h3>
+            <p>Daily use face wash.</p>
+            <div class="price">MRP: ₹225</div>
+            <button onclick="enquire('Ponds Face Wash')">
+                Enquire Now
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">💄</div>
+            <h3>Gel Lipstick</h3>
+            <p>Beauty & makeup product.</p>
+            <div class="price">MRP: ₹150</div>
+            <button onclick="enquire('Gel Lipstick')">
+                Enquire Now
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">🧴</div>
+            <h3>Head & Shoulders Shampoo</h3>
+            <p>180 ml shampoo.</p>
+            <div class="price">MRP: ₹180</div>
+            <button onclick="enquire('Head & Shoulders Shampoo 180 ml')">
+                Enquire Now
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <section id="about">
+
+        <h2>
+            About Us
+        </h2>
+
+        <div class="info-box">
+
+            <p>
+                Yahan aapko general items, makeup aur beauty products milenge.
+            </p>
+
+            <p>
+                Apni shop ki details baad mein yahan add kar sakte hain.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+        <p id="status"></p>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 My Shop. All rights reserved.
+
+    </footer>
+
+
+    <script>
+
+        function enquire(product) {
+
+            document.getElementById("message").value =
+                "Mujhe " + product + " ke baare mein enquiry karni hai.";
+
+            document.getElementById("contact").scrollIntoView();
+
+        }
+
+
+      function sendMessage(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const message = document.querySelector('textarea').value;
+
+    if (!name || !email || !message) {
+        alert("Please fill all details.");
+        return;
+    }
+
+    const whatsappNumber = "919795979470";
+
+    const whatsappMessage =
+        "New Enquiry%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage,
+        "_blank"
+    );
+}
+
+    </script>
+
+
+</body>
+</html>
