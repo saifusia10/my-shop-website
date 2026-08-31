@@ -325,14 +325,14 @@
     <script>
 
         function enquire(product) {
+    const whatsappNumber = "919795979470";
+    const message = "New Enquiry%0A%0AProduct: " + product;
 
-            document.getElementById("message").value =
-                "Mujhe " + product + " ke baare mein enquiry karni hai.";
-
-            document.getElementById("contact").scrollIntoView();
-
-        }
-
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + message,
+        "_blank"
+    );
+}
 
       function sendMessage(event) {
     event.preventDefault();
