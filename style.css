@@ -161,8 +161,7 @@ section h2 {
 .product-card p {
     color: #555;
     line-height: 1.6;
-    font-size:  16px
-}
+  font-size: 16px !important;
 
 button {
     border: none;
